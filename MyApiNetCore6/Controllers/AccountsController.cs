@@ -68,7 +68,7 @@ namespace MyApiNetCore6.Controllers
                 RedirectUri = Url.Action("GoogleResponse"),
                 Items = { { "scheme", "Google" } }
             };
-            return Challenge(properties, "Google");
+            return Ok(properties.Items);
         }
 
         [HttpGet("GoogleResponse")]
